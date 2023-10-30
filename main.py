@@ -9,8 +9,8 @@ pygame.init()
 pygame.display.set_caption("Playing")
 
 WIDTH, HEIGHT = 1000, 800
-FPS = 60
-PLAYER_VEL = 5 #player moving speed
+FPS = 120
+PLAYER_VEL = 10 #player moving speed
 
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 
@@ -91,7 +91,7 @@ def main(window):
         run = False
         break
       
-    player.loop(FPS)
+    player.loop(FPS) #60FPS run this def
     handle_move(player)  
     draw(window, background, bg_image, player)    
   pygame.quit()
